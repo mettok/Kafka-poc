@@ -48,9 +48,9 @@ services:
     environment:
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
 
-  kafka-message-delivery:
+  kafka-message-consumer:
     build:
-      context: ./kafka-message-delivery
+      context: ./kafka-message-consumer
       dockerfile: Dockerfile
     ports:
       - "8080:8080"

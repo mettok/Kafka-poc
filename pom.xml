@@ -1,21 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>no.zare</groupId>
-        <artifactId>kafka-poc</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath> <!-- adjust relative path accordingly -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>no.zare.kmp</groupId>
-    <artifactId>kafka-message-producer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>kafka-message-producer</name>
-    <description>kafka-message-producer</description>
+    <!-- Parent POM coordinates -->
+    <groupId>no.zare</groupId>
+    <artifactId>kafka-poc</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <!-- Define common properties -->
     <properties>
+        <!-- Define Java version -->
         <java.version>17</java.version>
     </properties>
+
+    <!-- Define common dependencies -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,6 +49,7 @@
         </dependency>
     </dependencies>
 
+    <!-- Define common build configuration -->
     <build>
         <plugins>
             <plugin>
@@ -52,4 +59,10 @@
         </plugins>
     </build>
 
+    <!-- Define common modules (child projects) -->
+    <modules>
+        <module>kafka-message-consumer</module>
+        <module>kafka-message-producer</module>
+        <!-- Add more child modules if needed -->
+    </modules>
 </project>
