@@ -55,3 +55,4 @@ Before running the applications, ensure you have the following installed:
    Replace `[name]` with the desired name for the greeting message.
 
 That's it! Kafka, Kafdrop, and the React app are now running, and you can send greeting messages to the Kafka message consumer using curl.
+![](/Users/mehdi/projects/Kafka-poc/kafka.png)

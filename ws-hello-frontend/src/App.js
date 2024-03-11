@@ -16,8 +16,8 @@ const App = () => {
                 subscriptionRef.current = client.subscribe('/topic/greetings', (message) => {
 
                     const newMessage = JSON.parse(message.body).content;
-                    console.log(message.body)
-                    setMessages(prevMessages => [...prevMessages, message.body]);
+                    console.log(message)
+                    setMessages(prevMessages => [...prevMessages, newMessage]);
                 });
             }
         }, (error) => {
@@ -38,7 +38,7 @@ const App = () => {
             <h1>WebSocket Messages</h1>
             <div>
                 {messages.map((message, index) => (
-                    <p key={index}>{message}</p>
+                    <p key={index}>Hei {message}</p>
                 ))}
             </div>
         </div>
